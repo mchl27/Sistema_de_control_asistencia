@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Configuracion";
+    Layout = "~/Views/Shared/_Layout_main.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Imagen -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center p-0">
+            <img src="~/img/3. Configuracion.jpg" alt="Aula" class="img-fluid img-rounded-custom shadow-sm" />
+        </div>
+
+        <!-- Panel de Configuración -->
+        <div class="col-md-6 d-flex flex-column justify-content-center p-5">
+            <h2 class="display-5 fw-bold mb-4">Configuración</h2>
+            <p class="fs-5 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel tincidunt consequat, elit metus hendrerit neque, at dignissim nisl eros sed urna. Nulla facilisi. Donec vitae sapien eu justo laoreet feugiat nec eget elit.
+            </p>
+            <p class="text-muted mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel tincidunt consequat...
+            </p>
+            <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisi vel tincidunt consequat...
+            </p>
+            <button class="btn text-white py-2 px-4 w-100" style="background-color: #2C3E50;">
+                Ver más
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <h2 class="mb-4 fw-bold">Opciones</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Tarjeta 1 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="~/img/3. Configuracion.jpg" class="card-img-top" alt="Registrar Estudiantes">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Estudiantes</h5>
+                    <p class="card-text text-muted">Descripción de la primera opción</p>
+                    <a asp-area="" asp-controller="Estudiantes" asp-action="Index" class="btn btn-sm text-white w-100" style="background-color: #2C3E50;">Ingresar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="~/img/3. Configuracion.jpg" class="card-img-top" alt="Registrar Maestros">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Maestros</h5>
+                    <p class="card-text text-muted">Descripción de la segunda opción</p>
+                    <a asp-area="" asp-controller="Profesors" asp-action="Index" class="btn btn-sm text-white w-100" style="background-color: #2C3E50;">Ingresar</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="~/img/3. Configuracion.jpg" class="card-img-top" alt="Registrar Maestros">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Usuarios</h5>
+                    <p class="card-text text-muted">Descripción de la tercera opción</p>
+                    <a asp-area="" asp-controller="Usuarios" asp-action="Index" class="btn btn-sm text-white w-100" style="background-color: #2C3E50;">Ingresar</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="~/img/3. Configuracion.jpg" class="card-img-top" alt="Registrar Maestros">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Directivo</h5>
+                    <p class="card-text text-muted">Descripción de la cuarta opción</p>
+                    <a href="#" class="btn btn-sm text-white w-100" style="background-color: #2C3E50;">Ingresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,164 @@
+﻿@model Sistema_de_asistencia.Models.Estudiante
+
+@{
+    ViewData["Title"] = "Crear Curso";
+    Layout = "~/Views/Shared/_Layout_main.cshtml";
+}
+
+<style>
+    .fixed-width-btn {
+        width: 80px;
+    }
+
+    .alert-custom {
+        color: red;
+        font-size: 1.2em;
+        display: none;
+        margin-top: 10px;
+    }
+
+    .card {
+        border-radius: 15px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    input[type="submit"] {
+        width: 150px;
+    }
+
+
+    .title-main {
+        font-size: 1.6em;
+        color: #333;
+    }
+
+    .title-menu {
+        font-size: 1.4em;
+        color: #333;
+    }
+
+    .card-header-title {
+        font-size: 1.1em;
+        color: #333;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+
+    .lead-content {
+        font-size: 1.0rem;
+        font-weight: 300;
+    }
+
+    .btn {
+        /* background-color: #007bff;
+                        border-color: #007bff; */
+        font-weight: 500;
+        padding: 5px 15px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .step-indicator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .step-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-circle {
+        width: 35px;
+        height: 35px;
+        border: 3px solid #ccc;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        color: #555;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+
+        .step-circle.active {
+            border-color: #000000;
+            color: #000000;
+        }
+
+    .step-label {
+        margin-top: 5px;
+        font-size: 0.85rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .line {
+        height: 3px;
+        width: 60px;
+        background-color: #ccc;
+    }
+
+</style>
+
+<div class="container">
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Volver
+    </a>
+</div>
+
+<div class="container mt-2">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <p class="text-center title-menu">Creación Usuario</p>
+
+                    <hr />
+                    <div class="col-md-4">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Id" class="control-label"></label>
+                                <select asp-for="Id" class ="form-control" asp-items="ViewBag.Id"></select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Curso" class="control-label"></label>
+                                <input asp-for="Curso" class="form-control" />
+                                <span asp-validation-for="Curso" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Grado" class="control-label"></label>
+                                <input asp-for="Grado" class="form-control" />
+                                <span asp-validation-for="Grado" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
